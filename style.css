@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1e1e1e;
+}
+.container{
+    width: 400px;
+    max-width: 400px;
+    gap: 40px;
+    min-height: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+.block{
+    box-shadow: 0px 0px 10px  black;
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+}
+.title{
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+.generate{
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    cursor: pointer;
+}
+.history{
+    width: 280px;
+    height: 100vh;
+    box-shadow: 0px 0px 10px  black;
+    overflow-y: auto;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    padding: 20px;
+    &::-webkit-scrollbar{
+        background: #000;
+        width: 15px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #3d3d3d;
+    }
+}
+ul{
+    list-style: none;
+}
+.h__item{
+    width: 100%;
+    height: 130px;
+    transition: .2s;
+    &:hover{
+        cursor: pointer;
+        border: 5px solid #fff;
+        opacity: 0.8;
+    }
+}
+@media(width < 600px){
+    body{
+        flex-direction: column-reverse;
+    }
+}
